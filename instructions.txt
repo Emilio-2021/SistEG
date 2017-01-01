@@ -1,0 +1,6 @@
+# SisEG Instructions file...
+
+Run the executable file "sisteg.exe" and open the geoeas file format "geoeas_testfile.txt" , the program is self explanatory please be 
+free to test all the capabilities and comment on it...
+
+Emilio Caraballo Castro
