@@ -7,7 +7,7 @@
     <KeyWords Value=""/>
     <Comments Value=""/>
     <ReportCreateDate Value="2017-01-06 11:43:00"/>
-    <ReportLastChange Value="2017-01-06 18:00:59"/>
+    <ReportLastChange Value="2017-01-06 20:36:20"/>
     <ReportVersionBuild Value=""/>
     <ReportVersionMajor Value=""/>
     <ReportVersionMinor Value=""/>
@@ -959,7 +959,7 @@
           <Data>
             <Format Value="558"/>
             <FormatStr Value=""/>
-            <Memo Value="Eng. Emilio Caraballo Castro ©&#xD;&#xA;"/>
+            <Memo Value="© July 2010, Cuador &amp; Caraballo&#xD;&#xA;"/>
             <Script Value=""/>
             <GapX Value="0"/>
             <GapY Value="0"/>
@@ -1291,7 +1291,7 @@
           <Data>
             <Format Value="558"/>
             <FormatStr Value=""/>
-            <Memo Value="Eng. Emilio Caraballo Castro&#xD;&#xA;(C) July 2010&#xD;&#xA;Reporte de datos de la aplicación SistEG.&#xD;&#xA;"/>
+            <Memo Value="Reporte de datos de la aplicación SistEG.&#xD;&#xA;"/>
             <Script Value=""/>
             <GapX Value="0"/>
             <GapY Value="0"/>
