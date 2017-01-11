@@ -159,44 +159,8 @@ type
     X, Y, Z:  tSingle4;
     Variable: array[1..10] of tSingle4; //TVariable;
   end;
-  { TAjuste }
-  TAjuste = record
-    //Titulo: string;
-    VarioDir: TVarioDir;
-    NVario: tEntero8;     //numero de variogramas
-    NPVario: tEntero16;     //numero de puntos del variograma
-    CovCorr: tSingle4;
-    NEstructuras: tEntero8;
-    Estructura: array[1..10] of TModelo;
-    Anisotropia: boolean;
-    AAnisot: tSingle4;//AnguloAnisot
-    Co             :tSingle4;
-    DatoZonaI: string;
-    DatoOrdenMatriz: string;
-    Media: tSingle4;
-    Criterios: TCriterios;
-    ajusteVario: array[0..4] of TAjusteV;
-    Datos: array[1..1000] of TLocalizacion;
-    N: integer; // NCasos -1 para el ajuste, no se toman puntos coincidentes
-  end;
-  { TLEstimacion }
-  TLEstimacion = record
-    Marcado: boolean;
-    X, Y:    real;
-    Np:      integer;
-    Pesos:   array[1..400] of record
-      Indice: integer;
-      Valor:  real;
-    end;
-    Valor:  real;
-    VEstim: real
-  end;
   { TKriging }
   TKriging      = (Simple, Ordinario);
-  { TMatriz }
-  TMatriz = array[1..400, 1..400] of real;
-  { TVector }
-  TVector = array[1..400] of real;
   { TElKriging }
   TElKriging = record
     Matriz: TMatriz;
@@ -208,62 +172,7 @@ type
     DifX:   real;
     DifY:   real;
   end;
-  { TCalcDistancias }
-  TCalcDistancias= record
-    Coef             :tSingle4;
-    RadioX,RadioY:real;
-    ZonaInflX:Real;
-    ZonaInflY:Real;
-    Estim         :Array[1..1] of TLEstimacion; {Localizaciones a estimar}
-    DistEstimDato :Array[1..400] Of TDistancia;
-    NoIndice      :Array[1..400] Of Integer; {Indice de los datos que se utilizan para estimar Xo,Yo o Xv,Yv}
-    DistDatoDato  :Array[1..400,1..400] Of TDistancia; {Distancia entre datos}
-    Np: integer;      {numero de localizaciones dentro del alcance y el indice de estas}
-    //N :integer; //
-    //AAnisot:tSingle4;
-  end;
-  {TGuardaGrafico}
-  TGuardaGrafico = (edt,gmb,gmbp,ghisto,reg,dis,vario,map,estim);
-var
-  editado: boolean;
-  TieneNombre: boolean;
-  Nombre: string;
-  ls: array of Tls;                //cant de saltos para imprimir
-  ColEstat: array of array of tSingle4; //Estadística de las columnas
-  losPares: array of TPares;
-  elGamma: array of TGamma;
-  MapaVar: array of array of TMapaV;
-  aImprimir: TaImprimir;
-  FRow: tEntero16;
-  precision: tEntero8;
-  camino: string;
-  paresCalculados: boolean;
-  EstadisticaCalculada:boolean;
-  ICMB, ICMBP: tEntero16s;
-  combinaciones: string;
-  elHistorigrama: TelHistorigrama;    //calculo histo
-  saltos, vueltas: tEntero8;
-  //variograma
-  NNp: tEntero16;    //numero de pares
-  TolAngHor, TolAngVer: tSingle4;
-  TolLineal: tSingle4;
-  DistMax: tSingle4;
-  Increm: tSingle4;
-  CovCorr: tSingle4;
-  //Mapa Var
-  MapaMin,MapaMax:tSingle4;
-  Ajuste:TAjuste;
-  lasDistancias: TCalcDistancias;
-  Kriging: TKriging;
-  ElKriging: TElKriging;
-  CantDatos: integer; //cant de rows, datos a procesar
-  VActiva:integer;      //Variable Activa, la del combo
-  //estimacion
-  Rejilla :TRejilla;
-  DKData: TInvDistKrigData;
-  Estimacion    :TEstimacion;
-  GuardaGrafico:TGuardaGrafico;
-  laCol, laFil: Integer;
+
 implementation
 
 end.
