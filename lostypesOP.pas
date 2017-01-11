@@ -27,16 +27,6 @@ type
   tEntero32  = Longword;   //0..4294967295
   { TEstimacion }
   TEstimacion = (Puntual, Bloques);
-  { TRejilla }
-  TRejilla = record
-    NodosX        :Integer;
-    NodosY        :Integer;
-    OrigenX       :tSingle4;
-    OrigenY       :tSingle4;
-    IncX          :tSingle4;
-    IncY          :tSingle4;
-    //Celdas     :Array Of Boolean;
-  end;
   { TInVDistKrigData }
   TInVDistKrigData= record
     RadioX,RadioY:real;
